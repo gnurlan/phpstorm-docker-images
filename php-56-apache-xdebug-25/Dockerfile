@@ -1,5 +1,6 @@
 FROM php:5.6-apache
 RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
 # Needed as a workaround for
 # https://github.com/JetBrains/phpstorm-docker-images/issues/5
 RUN BEFORE_PWD=$(pwd) \
