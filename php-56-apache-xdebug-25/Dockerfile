@@ -17,5 +17,6 @@ RUN BEFORE_PWD=$(pwd) \
     && make install \
     && cd "${BEFORE_PWD}" \
     && rm -r /opt/xdebug
+RUN a2enmod rewrite
 RUN docker-php-ext-enable xdebug
 RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini
